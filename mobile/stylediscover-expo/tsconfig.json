@@ -1,0 +1,22 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "strict": true,
+    "lib": ["ES2020", "DOM"],
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "types": ["nativewind/types"],
+    "paths": {
+      "@shared/*": ["src/shared/*"]
+    }
+  },
+  "include": [
+    "app",
+    "components",
+    "src",
+    "App.tsx",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}

@@ -1,0 +1,39 @@
+# File: docker-compose.yml
+# Purpose: Containerized dev (hot reload) and prod (nginx) flows for the web app.
+# Notes:
+# - web-dev uses Vite dev server on 0.0.0.0:5173 with source mounted.
+# - web-prod builds static assets and serves with nginx on port 8080.
+version: "3.9"
+
+services:
+  web-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    working_dir: /app
+    command: sh -c "npm run dev -- --host"
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+
+  web-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+      secrets:
+        - source: vite_env
+          target: /run/secrets/vite_env
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_ENV=production
+
+secrets:
+  vite_env:
+    file: ./vite_env.tmp

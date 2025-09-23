@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "StyleDiscover Expo",
+    "slug": "stylediscover-expo",
+    "scheme": "stylediscover",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.mohanvivek2421.stylediscoverexpo"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "extra": {
+      "SUPABASE_URL": "https://lmdtyamlfqkzghjmchmp.supabase.co",
+      "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxtZHR5YW1sZnFremdoam1jaG1wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg1NTE2NjksImV4cCI6MjA3NDEyNzY2OX0._2-xYIDnztUOxtIpzRc2iDVDxmeUfG1uI9xxZUzdkzc"
+    }
+  }
+}

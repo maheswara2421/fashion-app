@@ -1,0 +1,15 @@
+node_modules
+.git
+.gitignore
+dist
+Dockerfile
+npm-debug.log
+yarn-error.log
+.vscode
+.bolt
+
+# Env files (do not send to Docker context)
+.env
+.env.local
+.env.production
+vite_env.tmp
